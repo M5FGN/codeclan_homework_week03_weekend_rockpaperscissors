@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+<form action="">
+    <p><label class='label' for="player1">Player 1 Name:</label><input type="text">
+   <label for="player1_choice"></label>
+    <select name="player1_choice" id="player1_choice">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
+    </p>
+
+    <p id='against-computer'>You are playing against the Computer.
+    </p>
+
+    <p><input class='button' type="submit" value="PLAY GAME"></p>
+</form>
+</main>
+
+<footer>
+    <div class='menu-buttons'> <a class='btn-playgame' href="/instructions">INSTRUCTIONS</a>
+    </div>
+</footer>
+
+{% endblock %}

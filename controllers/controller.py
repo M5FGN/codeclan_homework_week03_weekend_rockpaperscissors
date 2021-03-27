@@ -1,57 +1,81 @@
-from flask import render_template
+from flask import render_template, request, redirect
 from play import app
 from models.game import *
 from models.player import *
 
-@app.route('/play')
+@app.route('/index')
 def index():
-    return 'Player 1 add your choice'
+    return render_template('index.html')
 
-@app.route('/play/rock')
+@app.route('/instructions')
+def instructions():
+    return render_template('instructions.html', title='Instructions')
+
+@app.route('/play')
+def playcomputer():
+    return render_template('play.html', title='Player 1 vrs The Computer')
+
+
+# @app.route('/index', methods=['post'])
+# def players():
+#     player1_name = request.form['player1_name']
+#     player1_choice = request.form['player1_choice']
+#     player_1 = Player(player1_name, player1_choice)
+#     player2_name = request.form['player2_name']
+#     player2_choice = request.form['player2_choice']
+#     player_2 = Player(player2_name, player2_choice)
+#     check_winner(player_1, player_2)
+#     return redirect('/results')
+
+@app.route('/rock')
 def rock_addplayer2():
     return 'Player 2 add your choice'
 
-@app.route('/play/paper')
+@app.route('/paper')
 def paper_addplayer2():
     return 'Player 2 add your choice'
 
-@app.route('/play/scissors')
+@app.route('/scissors')
 def scissors_addplayer2():
     return 'Player 2 add your choice'
 
 
-@app.route('/play/rock/paper')
+@app.route('/rock/paper')
 def rockpaper():
     return 'Player 2 has won'
 
-@app.route('/play/rock/scissors')
+@app.route('/rock/scissors')
 def rockscissors():
     return 'Player 1 has won'
 
-@app.route('/play/rock/rock')
+@app.route('/rock/rock')
 def rockrock():
     return 'The game is a draw'
 
-@app.route('/play/paper/paper')
+@app.route('/paper/paper')
 def paperpaper():
     return 'The game is a draw'
 
-@app.route('/play/paper/scissors')
+@app.route('/paper/scissors')
 def paperscissors():    
     return 'Player 2 has won'
 
-@app.route('/play/paper/rock')
+@app.route('/paper/rock')
 def paperrock():
     return 'Player 1 has won'
 
-@app.route('/play/scissors/paper')
+@app.route('/scissors/paper')
 def scissorspaper():
     return 'Player 1 has won'
 
-@app.route('/play/scissors/scissors')
+@app.route('/scissors/scissors')
 def scissorsscissors():
     return 'The game is a draw'
 
-@app.route('/play/scissors/rock')
+@app.route('/scissors/rock')
 def scissorsrock():
     return 'Player 2 has won'
+
+@app.route('/results')
+def results():
+    return render_template('results.html', title='Winner', players=players)

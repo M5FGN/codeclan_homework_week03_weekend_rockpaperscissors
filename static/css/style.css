@@ -1,0 +1,124 @@
+body {
+    background-color: rgb(211, 189, 247);
+}
+
+h1, h2, h3, #against-computer, .label {
+    font-family: 'New Tegomin', serif;
+    color: rgb(118, 52, 225);
+    text-align: left;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+#against-computer {
+    font-size: 32px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.label {
+    font-size: 32px;
+}
+
+.menu-buttons {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.button, .btn-playgame {
+    margin-top: 50px;
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid rgb(118, 52, 225);
+    border-radius: 20px;
+    font-family: 'New Tegomin', serif;
+    font-size: 26px;
+    text-align: center;
+    color:  rgb(118, 52, 225);
+}
+
+.button:hover, .btn-playgame:hover {
+    background-color: rgb(118, 52, 225);
+    color: white;
+}
+
+ol > li, ul > li {
+    font-size: 20px;
+}
+main {
+    width: 50%;
+    margin: auto;
+    border: 3px solid rgb(118, 52, 225);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+header > p {
+    text-align: center;
+}
+
+header > p > i {
+    font-size: 40px;
+    padding: 10px 20px;
+    color: rgb(118, 52, 225);
+}
+
+footer {
+    margin-top: 50px;
+}
+
+form {
+    text-align: center;
+
+}
+
+form > p > label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+form > p > input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+#player1_choice, #player2_choice {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.fa-trophy{
+    font-size: 100px;
+    color: rgb(118, 52, 225);
+}
+
+#trophy {
+    text-align: center;
+}
+
+
+
+
